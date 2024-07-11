@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main()
+{
+    printf(" ******\n      *\n      *\n      *\n      *\n      *");
+    return 0;
+}
+
+//output will be in the shape of the number 7
