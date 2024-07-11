@@ -1,20 +1,16 @@
+#include <stdio.h>
+
 int main()
 {
-    int i;
-    int num,sum=0;
-    
-    printf("Enter num:");
-    scanf("%d",&num);
-    
-    for(i=1;i<=num;i++)
-    {
-        if(i%3==0 && i%5==0)
-        {
-            printf("%d can be divided by both 3 and 5\n",i);
-            sum=sum+i;
-        }
-    }
-    printf("Sum=%d\n",sum);
+    int num;
+    int units, tens, hundreds;
 
+    printf("Enter a 3-digit number: ");
+    scanf("%d", &num);
+
+    units = num % 10;
+    tens = (num / 10) % 10;
+    hundreds = num / 100;
+    printf("The total sum of digits in %d is %d\n", num, units + tens + hundreds);
     return 0;
 }
