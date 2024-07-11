@@ -1,19 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float findAverage (int grade1, int grade2, int grade3)
+int main()
 {
-    float avg;
-    avg=(grade1+grade2+grade3)/3.0;
-    return avg;
+    int num1,num2,num3;
+    printf("Enter num1, num2, num3: \n");
+    scanf("%d%d%d",&num1, &num2, &num3)
+    
+    if(num1>num2)
+        if(num1>num3)
+            return num1;
+        else
+            return num3;
+    else if(num2>num3)
+        return num2;
+    else return num3;
 }
 int main()
 {
-    int g1,g2,g3;
-    printf("Enter 3 grades: ");
-    scanf("%d%d%d",&g1, &g2, &g3);
-    
-    printf("Average = %f\n", findAverage (g1,g2,g3));
-
+    int max;
+    max=maxBetween3();
+    printf("Maximum=%d \n", max);
     return 0;
 }
