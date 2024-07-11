@@ -1,10 +1,16 @@
 #include <stdio.h>
 int main()
 {
-    int i;
-    for (i = 1; i <= 100; i++)
-    {
-        printf("I'm practicing C\n");
-    }
-    return 0;
+	int day, month, year;
+	printf("Enter day: ");
+	scanf("%d", &day);
+	printf("Enter month: ");
+	scanf("%d", &month);
+	printf("Enter year: ");
+	scanf("%d", &year);
+
+	printf("Day: 0x%X \n", day);
+	printf("Month: 0x%X \n", month);
+	printf("Year: 0x%X \n", year);
+	return 0;
 }
