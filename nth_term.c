@@ -1,14 +1,18 @@
 #include <stdio.h>
+
 int main()
 {
-    float a,d;
-    int n;
-    printf("Enter initial term (a1) : ");
-    scanf("%f", &a);
-    printf("Enter difference (d): ");
-    scanf("%f", &d);
-    printf("Enter number of terms (n): ");
-    scanf("%d", &n);
-    printf("The nth term = %.1f", a+(n-1)/d);
-    return 0;
+	float al, d, an;
+	int n;
+	printf("Enter the Initial Term (al): ");
+	scanf("%f", &al);
+	printf("Enter the difference in the Arithmetic Sequence: ");
+	scanf("%f", &d);
+	printf("Enter the number of elements in the Arithmetic Sequence: ");
+	scanf("%d", &n);
+
+	an = al + (n - 1) * d;
+	printf("The n-th term of the Arithmetic Sequence = %f\n", an);
+
+	return 0;
 }
