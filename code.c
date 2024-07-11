@@ -1,25 +1,47 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> 
 
-int main()
-{
-    int num1,num2,num3;
-    printf("Enter num1, num2, num3: \n");
-    scanf("%d%d%d",&num1, &num2, &num3)
-    
-    if(num1>num2)
-        if(num1>num3)
-            return num1;
-        else
-            return num3;
-    else if(num2>num3)
-        return num2;
-    else return num3;
-}
-int main()
-{
-    int max;
-    max=maxBetween3();
-    printf("Maximum=%d \n", max);
-    return 0;
+void swap(int* xp, int* yp) 
+{ 
+	int temp = *xp; 
+	*xp = *yp; 
+	*yp = temp; 
+} 
+
+
+void selectionSort(int arr[], int n) 
+{ 
+	int i, j, min_idx; 
+
+
+	for (i = 0; i < n - 1; i++) { 
+
+		min_idx = i; 
+		for (j = i + 1; j < n; j++) 
+			if (arr[j] < arr[min_idx]) 
+				min_idx = j; 
+
+		swap(&arr[min_idx], &arr[i]); 
+	} 
+} 
+
+void printArray(int arr[], int size) 
+{ 
+	int i; 
+	for (i = 0; i < size; i++) 
+		printf("%d ", arr[i]); 
+	printf("\n"); 
+} 
+
+int main() 
+{ 
+	int arr[] = { 0, 23, 14, 12, 9 }; 
+	int n = sizeof(arr) / sizeof(arr[0]); 
+	printf("Original array: \n"); 
+	printArray(arr, n); 
+
+	selectionSort(arr, n); 
+	printf("\nSorted array in Ascending order: \n"); 
+	printArray(arr, n); 
+
+	return 0; 
 }
