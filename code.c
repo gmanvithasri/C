@@ -1,17 +1,18 @@
 int main()
 {
+    int num, multiplicator;
     int i;
-    int num;
     
     printf("Enter num: ");
     scanf("%d", &num);
     
-    while(num>0)
+    printf("Enter the multiplicator:");
+    scanf("%d", &multiplicator);
+    
+    for(i=1;i<=multiplicator;i++)
     {
-        printf("%d",i);
-        i+=2;
-        num=num-1;
+        printf("%d*d=%d\n", num,i,num*i);
     }
-  
+    
     return 0;
 }
